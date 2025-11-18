@@ -1,0 +1,158 @@
+.page{
+    margin: 0;
+    font-family: 'Century Gothic';
+}
+
+header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: black;
+    position: fixed;
+    top:0;
+    right: 0;
+    left: 0;
+    padding: 25px;
+}
+
+.nom_prenom{
+    color: white;
+    font-weight: bold;
+    margin-right: 70px;
+    font-size: 1.4em;
+    letter-spacing: 2px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.nom_prenom:hover{
+    font-size: 1.3em;
+}
+
+.prenom{
+    color: rgba(56, 241, 241, 0.929);
+    gap: 15px;
+}
+
+.nav_links{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 40px;
+    margin-left: 100px;
+}
+
+.nav_links li{
+    list-style-type: none;
+    
+}
+
+.nav_links li a{
+    text-decoration: none;
+    color: white;
+    font-size: 0.9em;
+    transition-duration: 0.5s;
+}
+
+.nav_links li a:hover {
+    color: rgba(56, 241, 241, 0.929);
+    font-size: 1.3em;
+}
+
+
+.corps{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 200px;
+
+}
+
+.corps p{
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.presentation_projet {
+    flex-direction: column;
+    text-align: center;
+}
+
+.projet{
+    width: 250px;
+    height: 60px;
+    border: 1px solid ;
+    border-radius: 10px;
+    font-size: 1.2em;
+    color: white;
+    font-weight: bold;
+    background-color: rgba(56, 241, 241, 0.929);
+    cursor: pointer;
+    transition-duration: 0.5s;
+    box-shadow: 2px 3px 5px 3px black;
+
+}
+
+.projet:hover{
+    background-color: white;
+    color: black;
+}
+
+.image{
+    width: auto;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span{
+        background: white;
+        height: 3px;
+        width: 35px;
+        margin: 5px 0;
+        transition: 0.3s;
+    }
+
+@media (max-width : 450px) {
+    .nav_links {
+        position: absolute;
+        top: 60px;
+        right: -300px;
+        background: black;
+        flex-direction: column;
+        width: 200px;
+        padding:20px ;
+        transition: 0.3s;
+    }
+
+    .nav_links.show{
+        right: 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .corps {
+        display: inline;
+    }
+
+    .corps p {
+        margin-top: 60%;
+    }
+    .image {
+        margin-top: 20%;
+    }
+
+    .nom_prenom {
+        font-size: 2em;
+    }
+    
+}
+
+
+

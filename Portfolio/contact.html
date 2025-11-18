@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="shortcut icon" href="Mstack favicon 01.png" type="image/x-icon">
+    <title>Contact</title>
+</head>
+<body>
+    <div class="page">
+        <header>
+            <p class="nom_prenom">HUNLEDE  <span class="prenom">AYI MOÏSE</span></p>
+            <nav class="navbar">
+                <ul class="nav_links" id="navLinks">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="propos.html">A propos</a></li>
+                    <li><a href="projet.html">Projets</a></li>
+                    <li><a href="competence.html">Compétences</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </header>
+        <div class="formulaire">
+            <h1>Vous avez un <span class="pro-tete">projet en tête ? </span><br><br>N'hésitez pas à me <span class="pro-tete">contacter</span></h1>
+            <form action="mailto: ayimoisehunlede@gmail.com" method="post">
+                <div class="premier">
+                    <div class="prenom_side">
+                        <label for="Prénom">Votre prénom</label><br>
+                        <input type="text" name="Prénom" id="Prénom" placeholder="Ex: Moïse">
+                    </div>
+                    <div class="nom_side">
+                        <label for="Nom">Votre nom</label><br>
+                        <input type="text" name="Nom" id="Nom" placeholder="Ex: HUNLEDE">
+                    </div>
+                </div>
+                <div class="sujet">
+                    <label for="Sujet">Votre sujet</label><br>
+                    <input type="text" name="Sujet" id="Sujet" placeholder="Ex: Développement d'un site web">
+                </div><br>
+                <div class="message">
+                    <input type="text" name="Message" id="Message" placeholder="Entrez votre message ici!">
+                </div><br>
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

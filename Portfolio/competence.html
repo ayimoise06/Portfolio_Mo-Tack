@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="competence.css" />
+    <link
+      rel="shortcut icon"
+      href="Mstack favicon 01.png"
+      type="image/x-icon"
+    />
+    <title>Compétences</title>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <p class="nom_prenom">HUNLEDE <span class="prenom">AYI MOÏSE</span></p>
+        <nav class="navbar">
+          <ul class="nav_links" id="navLinks">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="propos.html">A propos</a></li>
+            <li><a href="projet.html">Projets</a></li>
+            <li><a href="competence.html">Compétences</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </header>
+      <div class="global-container">
+        <h1>Mes compétences</h1>
+        <div class="global">
+          <div class="skills">
+            <h2>Soft skills</h2>
+
+            <div class="competence">
+              <span class="libelle">Gestion de projet</span>
+              <div class="barre-fond">
+                <div class="barre-progression soft1" data-niveau="25"></div>
+              </div>
+            </div>
+
+            <div class="competence">
+              <span class="libelle">Résolution de problème</span>
+              <div class="barre-fond">
+                <div class="barre-progression soft2" data-niveau="35"></div>
+              </div>
+            </div>
+
+            <div class="competence">
+              <span class="libelle">Adaptabilité</span>
+              <div class="barre-fond">
+                <div class="barre-progression soft3" data-niveau="65"></div>
+              </div>
+            </div>
+
+            <div class="competence">
+              <span class="libelle">Collaborativité</span>
+              <div class="barre-fond">
+                <div class="barre-progression soft4" data-niveau="55"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- skills separator -->
+
+          <div class="skills">
+            <h2>Hard skills</h2>
+
+            <div class="competence">
+              <span class="libelle">HTML - CSS</span>
+              <div class="barre-fond">
+                <div class="barre-progression hard1" data-niveau="70"></div>
+              </div>
+            </div>
+
+            <div class="competence">
+              <span class="libelle">JavaScript</span>
+              <div class="barre-fond">
+                <div class="barre-progression hard2" data-niveau="15"></div>
+              </div>
+            </div>
+
+            <div class="competence">
+              <span class="libelle">Java</span>
+              <div class="barre-fond">
+                <div class="barre-progression hard3" data-niveau="15"></div>
+              </div>
+            </div>
+
+            <div class="competence">
+              <span class="libelle">Python</span>
+              <div class="barre-fond">
+                <div class="barre-progression hard4" data-niveau="10"></div>
+              </div>
+            </div>
+
+            <div class="competence">
+              <span class="libelle">React</span>
+              <div class="barre-fond">
+                <div class="barre-progression hard5" data-niveau="15"></div>
+              </div>
+            </div>
+
+            <div class="competence">
+              <span class="libelle">Git - GitHub</span>
+              <div class="barre-fond">
+                <div class="barre-progression hard6" data-niveau="30"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      window.addEventListener("load", () => {
+        document.querySelectorAll(".barre-progression").forEach((bar) => {
+          const target = bar.getAttribute("data-niveau");
+          bar.style.width = target + "%";
+        });
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

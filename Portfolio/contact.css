@@ -1,0 +1,222 @@
+.page{
+    margin: 0;
+    font-family: 'Century Gothic';
+    
+}
+body{
+    background-color: black;
+}
+
+header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: black;
+    position: fixed;
+    top:0;
+    right: 0;
+    left: 0;
+    padding: 25px;
+}
+
+.nom_prenom{
+    color: white;
+    font-weight: bold;
+    margin-right: 70px;
+    font-size: 1.4em;
+    letter-spacing: 2px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.nom_prenom:hover{
+    font-size: 1.3em;
+}
+
+.prenom{
+    color: rgba(56, 241, 241, 0.929);
+    gap: 15px;
+}
+
+.nav_links{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 40px;
+    margin-left: 100px;
+}
+
+.nav_links li{
+    list-style-type: none;
+    
+}
+
+.nav_links li a{
+    text-decoration: none;
+    color: white;
+    font-size: 0.9em;
+    transition-duration: 0.5s;
+}
+
+.nav_links li a:hover {
+    color: rgba(56, 241, 241, 0.929);
+    font-size: 1.3em;
+}
+
+.formulaire {
+    margin-top: 180px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+.pro-tete {
+    color:rgba(56, 241, 241, 0.929) ;
+    font-weight: bold;
+}
+.formulaire {
+    flex-direction: column;
+    text-align: center;
+}
+
+.premier {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.premier label {
+    color: white;
+    margin-right: 100px;
+    font-size: 0.8em;
+}
+
+.premier input {
+    width: 250px;
+    height: 30px;
+    margin-left: 60px;
+    border-radius: 10px;
+    border: 1px solid rgba(56, 241, 241, 0.929);
+}
+
+.sujet label {
+    color: white;
+    margin-right: 730px;
+    font-size: 0.8em;
+}
+
+.sujet input {
+    width: 860px;
+    height: 30px;
+    margin-left: 60px;
+    border-radius: 10px;
+    border: 1px solid rgba(56, 241, 241, 0.929);
+}
+.message input {
+    width: 860px;
+    height: 200px;
+    border-radius: 10px;
+    margin-left: 60px;
+    border: 1px solid rgba(56, 241, 241, 0.929);
+}
+
+button {
+    width: 150px;
+    height: 30px;
+    background-color: rgb(9, 220, 220);
+    font-weight: bold;
+    color: white;
+    transition-duration: 0.5s;
+    border-radius: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: white;
+    font-weight: bold;
+    color: black;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span{
+        background: white;
+        height: 3px;
+        width: 35px;
+        margin: 5px 0;
+        transition: 0.3s;
+    }
+
+@media (max-width : 450px) {
+    .nav_links {
+        position: absolute;
+        top: 60px;
+        right: -300px;
+        background: black;
+        flex-direction: column;
+        width: 200px;
+        padding:20px ;
+        transition: 0.3s;
+    }
+
+    .nav_links.show{
+        right: 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nom_prenom {
+        font-size: 2em;
+    }
+
+    h1{
+        margin-left: 20%;
+    }
+    .premier {
+        display: inline;
+        flex-direction: column;
+    }
+    .formulaire {
+        flex-direction: column;
+        margin-bottom: 100px ;
+        margin: 150px ;
+        padding: 10px;
+        justify-content: center;
+    }
+
+    .premier,.sujet,.message label {
+        font-size: 2em;
+        margin-right: 120p;
+    }
+
+    .premier input {
+        width: 400px;
+    }
+
+    .sujet input {
+        width: 400px;
+        margin-bottom: 50p;
+    }
+    .message input {
+        width: 400px;
+        height: 400px;
+        margin-bottom: 20p;
+    }
+
+    button {
+        width: 250px;
+        height: 50px;
+        font-size: 1.8em;
+        margin-left: 120p;
+    }
+    
+}    
