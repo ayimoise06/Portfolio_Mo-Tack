@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="contact.css">
-    <link rel="shortcut icon" href="Mstack favicon 01.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/shared.css">
+    <link rel="shortcut icon" href="assets/Mstack favicon 01.png" type="image/x-icon">
     <title>Contact</title>
 </head>
-<body>
+<body class="contact-page">
     <div class="page">
         <header>
             <p class="nom_prenom">HUNLEDE  <span class="prenom">AYI MOÏSE</span></p>
@@ -26,30 +27,54 @@
                 <span></span>
             </div>
         </header>
-        <div class="formulaire">
-            <h1>Vous avez un <span class="pro-tete">projet en tête ? </span><br><br>N'hésitez pas à me <span class="pro-tete">contacter</span></h1>
-            <form action="mailto: ayimoisehunlede@gmail.com" method="post">
-                <div class="premier">
-                    <div class="prenom_side">
-                        <label for="Prénom">Votre prénom</label><br>
-                        <input type="text" name="Prénom" id="Prénom" placeholder="Ex: Moïse">
+        <main class="contact-layout">
+            <section class="contact-copy">
+                <p class="eyebrow">Contact</p>
+                <h1>Vous avez un <span class="pro-tete">projet en tête</span> ?</h1>
+                <p class="intro">
+                    Décrivez votre idée, votre budget ou votre délai, et je vous répondrai rapidement.
+                </p>
+
+                <div class="contact-card-info">
+                    <div>
+                        <span class="info-label">Email</span>
+                        <a href="mailto:ayimoisehunlede@gmail.com">ayimoisehunlede@gmail.com</a>
                     </div>
-                    <div class="nom_side">
-                        <label for="Nom">Votre nom</label><br>
-                        <input type="text" name="Nom" id="Nom" placeholder="Ex: HUNLEDE">
+                    <div>
+                        <span class="info-label">Disponibilité</span>
+                        <p>Réponse sous 24 à 48h.</p>
                     </div>
                 </div>
-                <div class="sujet">
-                    <label for="Sujet">Votre sujet</label><br>
-                    <input type="text" name="Sujet" id="Sujet" placeholder="Ex: Développement d'un site web">
-                </div><br>
-                <div class="message">
-                    <input type="text" name="Message" id="Message" placeholder="Entrez votre message ici!">
-                </div><br>
-                <button type="submit">Envoyer</button>
-            </form>
-        </div>
+            </section>
+
+            <section class="formulaire">
+                <form action="mailto:ayimoisehunlede@gmail.com" method="post" enctype="text/plain" class="contact-form">
+                    <div class="premier">
+                        <div class="field">
+                            <label for="Prénom">Votre prénom</label>
+                            <input type="text" name="Prénom" id="Prénom" placeholder="Ex: Moïse" autocomplete="given-name" required>
+                        </div>
+                        <div class="field">
+                            <label for="Nom">Votre nom</label>
+                            <input type="text" name="Nom" id="Nom" placeholder="Ex: HUNLEDE" autocomplete="family-name" required>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="Sujet">Votre sujet</label>
+                        <input type="text" name="Sujet" id="Sujet" placeholder="Ex: Développement d'un site web" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="Message">Votre message</label>
+                        <textarea name="Message" id="Message" rows="8" placeholder="Décrivez votre besoin ici..." required></textarea>
+                    </div>
+
+                    <button type="submit">Envoyer le message</button>
+                </form>
+            </section>
+        </main>
     </div>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
