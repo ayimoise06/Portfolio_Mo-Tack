@@ -164,7 +164,7 @@ header .nav_links li a:focus-visible {
     display: grid;
     grid-template-columns: 1fr 1.1fr;
     gap: 2rem;
-    align-items: center;
+    align-items: start;
 }
 
 .contact-copy {
@@ -184,6 +184,11 @@ header .nav_links li a:focus-visible {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.12em;
+}
+
+.eyebrow--light {
+    background: rgba(20, 184, 166, 0.08);
+    border-color: rgba(20, 184, 166, 0.24);
 }
 
 .contact-copy h1 {
@@ -240,22 +245,56 @@ header .nav_links li a:focus-visible {
     flex-direction: row;
     justify-content: flex-end;
     margin-top: 0;
+    align-self: stretch;
 }
 
 .contact-form {
     width: 100%;
-    max-width: 640px;
-    padding: 1.5rem;
+    max-width: 720px;
+    padding: 1.8rem;
     border-radius: 28px;
     background: rgba(10, 17, 26, 0.82);
     border: 1px solid rgba(255, 255, 255, 0.08);
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(12px);
+    display: grid;
+    gap: 1rem;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.contact-form::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 5px;
+    background: linear-gradient(90deg, rgba(20, 184, 166, 0.95), rgba(34, 211, 238, 0.95));
+    z-index: -1;
+}
+
+.contact-form-head {
+    display: grid;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.contact-form-head h2 {
+    margin: 0;
+    color: #fff;
+    font-size: clamp(1.3rem, 2.8vw, 1.9rem);
+    line-height: 1.15;
+}
+
+.contact-form-head p:last-child {
+    margin: 0;
+    color: var(--text-muted);
+    line-height: 1.7;
 }
 
 .premier {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
     gap: 1rem;
 }
 
@@ -263,7 +302,11 @@ header .nav_links li a:focus-visible {
     display: flex;
     flex-direction: column;
     gap: 0.45rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
+    padding: 1rem 1rem 1.05rem;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
 }
 
 .field label {
@@ -304,7 +347,7 @@ header .nav_links li a:focus-visible {
 
 .contact-form button {
     width: 100%;
-    margin-top: 0.5rem;
+    margin-top: 0.2rem;
     padding: 0.95rem 1.2rem;
     border: 0;
     border-radius: 16px;
@@ -482,9 +525,12 @@ button:focus-visible,
         max-width: 100%;
     }
 
-    .premier,
     .contact-card-info {
         grid-template-columns: 1fr;
+    }
+
+    .field {
+        padding: 0.9rem;
     }
 }
 
